@@ -7,9 +7,7 @@ import { LikesModule } from './likes/likes.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      `mongodb+srv://Odevtools007:QNQczaC83JTeI39a@cluster0.1bhjq.mongodb.net/nestDB?retryWrites=true&w=majority`,
-    ),
+    MongooseModule.forRoot(''),
     AuthModule,
     UsersModule,
     PostsModule,
