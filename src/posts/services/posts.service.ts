@@ -1,9 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
-import { Post, PostDocument } from 'src/schemas/posts.schema';
-import { CreatePostType, UserPayload } from 'src/utils/types';
 import { UpdatePostDto } from '../dtos/UpdatePost.dto';
+import { Post, PostDocument } from '../../schemas/posts.schema';
+import { CreatePostType, UserPayload } from '../../utils/types';
 
 @Injectable()
 export class PostsService {

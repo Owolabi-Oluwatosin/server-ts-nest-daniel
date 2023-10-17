@@ -3,9 +3,9 @@ import { AuthenticateMiddleware } from '../middlewares/authenticate/authenticate
 import { MongooseModule } from '@nestjs/mongoose';
 import { PostsController } from './controllers/posts.controller';
 import { PostsService } from './services/posts.service';
-import { Post, PostSchema } from 'src/schemas/posts.schema';
-import { UserMiddleware } from 'src/middlewares/userMiddleware/user.middleware';
-import { User, UserSchema } from 'src/schemas/users.schema';
+import { Post, PostSchema } from '../schemas/posts.schema';
+import { User, UserSchema } from '../schemas/users.schema';
+import { UserMiddleware } from '../middlewares/userMiddleware/user.middleware';
 
 @Module({
   imports: [

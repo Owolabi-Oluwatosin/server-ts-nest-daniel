@@ -3,7 +3,7 @@ import { UsersController } from './controllers/users.controller';
 import { UsersService } from './services/users.service';
 import { AuthenticateMiddleware } from '../middlewares/authenticate/authenticate.middleware';
 import { MongooseModule } from '@nestjs/mongoose';
-import { User, UserSchema } from 'src/schemas/users.schema';
+import { User, UserSchema } from '../schemas/users.schema';
 
 @Module({
   imports: [

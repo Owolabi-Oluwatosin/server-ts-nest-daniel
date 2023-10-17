@@ -1,12 +1,12 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { AuthenticateMiddleware } from 'src/middlewares/authenticate/authenticate.middleware';
-import { UserMiddleware } from 'src/middlewares/userMiddleware/user.middleware';
+import { AuthenticateMiddleware } from '../middlewares/authenticate/authenticate.middleware';
+import { UserMiddleware } from '../middlewares/userMiddleware/user.middleware';
 import { LikesController } from './controllers/likes.controller';
 import { LikesService } from './services/likes.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Like, LikeSchema } from 'src/schemas/likes.schema';
-import { Post, PostSchema } from 'src/schemas/posts.schema';
-import { User, UserSchema } from 'src/schemas/users.schema';
+import { Like, LikeSchema } from '../schemas/likes.schema';
+import { Post, PostSchema } from '../schemas/posts.schema';
+import { User, UserSchema } from '../schemas/users.schema';
 
 @Module({
   imports: [

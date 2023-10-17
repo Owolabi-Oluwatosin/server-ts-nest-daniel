@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import * as jwt from 'jsonwebtoken';
-import { jwtConstants } from 'src/auth/constants';
+import { jwtConstants } from '../../auth/constants';
 
 @Injectable()
 export class AuthenticateMiddleware implements NestMiddleware {

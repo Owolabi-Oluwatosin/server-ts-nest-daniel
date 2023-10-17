@@ -1,10 +1,10 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
-import { Like } from 'src/schemas/likes.schema';
-import { Post } from 'src/schemas/posts.schema';
-import { User } from 'src/schemas/users.schema';
-import { LikeType, UserPayload } from 'src/utils/types';
+import { Like } from '../../schemas/likes.schema';
+import { User } from '../../schemas/users.schema';
+import { Post } from '../../schemas/posts.schema';
+import { LikeType, UserPayload } from '../../utils/types';
 
 @Injectable()
 export class LikesService {

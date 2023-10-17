@@ -18,9 +18,8 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
-import { UsersService } from 'src/users/services/users.service';
 import { UpdateUserDto } from '../dtos/UpdateUser.dto';
+import { UsersService } from '../services/users.service';
 
 @Controller('api/users')
 export class UsersController {
