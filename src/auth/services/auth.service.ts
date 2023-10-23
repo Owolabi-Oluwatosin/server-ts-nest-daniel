@@ -65,11 +65,7 @@ export class AuthService {
   async signIn(userDetails: SigninUserType): Promise<any> {
     const { email, password } = userDetails;
     const user = await this.userModel.findOne({ email: email });
-    if (!user)
-      throw new HttpException(
-        'User with this email already exist',
-        HttpStatus.FOUND,
-      );
+    if (!user) throw new HttpException('User not found', HttpStatus.FOUND);
     const isMatch = await bcrypt.compare(password, user.hash_password);
     if (!isMatch)
       throw new HttpException(
