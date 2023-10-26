@@ -5,7 +5,7 @@ import { NextFunction, Request, Response } from 'express';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://server-ts-nest-daniel.vercel.app',
+    origin: 'https://nest-client-daniel.vercel.app',
     methods: ['GET, HEAD, PATCH, POST, DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
