@@ -64,9 +64,9 @@ export class AuthService {
 
   async signIn(userDetails: SigninUserType): Promise<any> {
     const { email, password } = userDetails;
-    const user = await this.userModel.findOne({ email: email });
-    if (!user) throw new HttpException('User not found', HttpStatus.FOUND);
-    const isMatch = await bcrypt.compare(password, user.hash_password);
+    const _user = await this.userModel.findOne({ email: email });
+    if (!_user) throw new HttpException('User not found', HttpStatus.FOUND);
+    const isMatch = await bcrypt.compare(password, _user.hash_password);
     if (!isMatch)
       throw new HttpException(
         'Invalid email and password',
@@ -74,10 +74,18 @@ export class AuthService {
       );
     if (isMatch) {
       const payload = {
-        id: user._id,
-        role: user.role,
+        id: _user._id,
+        role: _user.role,
       };
       const access_token = await this.jwtService.signAsync(payload);
+      const user = {
+        _id: _user._id,
+        firstName: _user.firstName,
+        lastName: _user.lastName,
+        handle: _user.handle,
+        email: _user.email,
+        role: _user.role,
+      };
       const userDetails = {
         user,
         access_token,
