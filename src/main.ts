@@ -15,15 +15,6 @@ async function bootstrap() {
       'Authorization',
       'X-Api-Key',
     ],
-    exposedHeaders: [
-      'Origin',
-      'X-Requested-With',
-      'Content-Type',
-      'Accept',
-      'X-Access-Token',
-      'Authorization',
-      'X-Api-Key',
-    ],
     credentials: true,
     preflightContinue: false,
   });
